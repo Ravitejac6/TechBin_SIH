@@ -4,6 +4,7 @@ import { Router } from "@angular/router";
 import { BrowserModule } from "@angular/platform-browser";
 import { ChartDataSets, ChartOptions } from "chart.js";
 import { Color, Label } from "ng2-charts";
+import { Observable, Subscription } from "rxjs";
 
 @Component({
   selector: "app-login",
@@ -12,15 +13,26 @@ import { Color, Label } from "ng2-charts";
 })
 export class LoginComponent implements OnInit {
   data: any;
+  public dbData: Observable<any>;
+  values: Array<any> = []; //Array Initialization.
+  noteListSubscription: Subscription;
 
   constructor(public as: AuthService, private route: Router) {}
-
+  // To iterate observable we have to subscribe it and do it.
   ngOnInit() {
     this.data = this.as.get_string();
+    this.dbData = this.as.display_details();
+    // Iterating over the data which is in the observable.
+    this.dbData.subscribe((val) =>
+      val.forEach((element) => {
+        this.values.push(element["value"]); // Adding data to the array.
+        console.log(element["value"]);
+      })
+    );
   }
 
   lineChartData: ChartDataSets[] = [
-    { data: [85, 72, 78, 75, 77, 75], label: "Crude oil prices" },
+    { data: this.values, label: "Crude oil prices" },
   ];
 
   lineChartLabels: Label[] = [

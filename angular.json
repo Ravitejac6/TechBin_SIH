@@ -124,6 +124,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "smartbin"
+    }
+  },
+  "defaultProject": "smartbin",
+  "cli": {
+    "analytics": "c09edd48-732c-4c19-b69b-4ba7af578e67"
+  }
 }

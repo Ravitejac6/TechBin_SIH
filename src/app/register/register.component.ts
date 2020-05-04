@@ -29,11 +29,11 @@ export class RegisterComponent implements OnInit {
     this.firebaseData = this.authService.display_details(); // Retrieving data from a realtime db.
   }
 
-  trylogin() {
+  tryGoogleLogin() {
     this.authService.doGoogleLogin();
     this.router.navigate(["/login"]);
   }
-  login() {
+  tryAnonymousLogin() {
     this.authService.anonymousLogin();
     this.router.navigate(["/user"]);
   }

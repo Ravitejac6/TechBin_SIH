@@ -20,6 +20,9 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { UserComponent } from "./user/user.component";
 import { AuthGuard } from "./guards/auth.guard";
 import { ChartsModule } from "ng2-charts";
+import { MatSidenavModule, MatListModule } from "@angular/material";
+import { FlexLayoutModule } from "@angular/flex-layout";
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +30,7 @@ import { ChartsModule } from "ng2-charts";
     LoginComponent,
     RegisterComponent,
     UserComponent,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,
@@ -39,6 +43,9 @@ import { ChartsModule } from "ng2-charts";
     MatButtonModule,
     MatToolbarModule,
     MatIconModule,
+    MatSidenavModule,
+    MatListModule,
+    FlexLayoutModule,
     MatCardModule,
     AgmCoreModule.forRoot({
       apiKey: "AIzaSyAhusDEobqFjkf5_U328gcU48GbZe_A58Q",

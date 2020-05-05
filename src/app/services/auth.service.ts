@@ -15,12 +15,12 @@ export class AuthService {
   public colist: any[];
   sampleData: Observable<any[]>;
 
+  // If we inject authService in the constructor then there will be cyclic dependecy so just remove it from the constructor.
   constructor(
     private db: AngularFireDatabase,
     private router: Router,
     private afAuth: AngularFireAuth,
     private af: AngularFirestore,
-    public as: AuthService,
     public zone: NgZone
   ) {
     // this.afAuth.authState.subscribe(user => {

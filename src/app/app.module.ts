@@ -15,14 +15,17 @@ import { AgmCoreModule } from "@agm/core";
 import { AngularFireDatabaseModule } from "angularfire2/database";
 import { MatButtonModule } from "@angular/material/button";
 import { MatToolbarModule } from "@angular/material/toolbar";
-import { MatIconModule, MatCardModule } from "@angular/material";
+import { MatCardModule } from "@angular/material/card";
+import { MatIconModule } from "@angular/material/icon";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { UserComponent } from "./user/user.component";
 import { AuthGuard } from "./guards/auth.guard";
 import { ChartsModule } from "ng2-charts";
-import { MatSidenavModule, MatListModule } from "@angular/material";
+import { MatListModule } from "@angular/material/list";
+import { MatSidenavModule } from "@angular/material/sidenav";
 import { FlexLayoutModule } from "@angular/flex-layout";
-import { HeaderComponent } from './header/header.component';
+import { HeaderComponent } from "./header/header.component";
+import { AuthService } from "./services/auth.service";
 
 @NgModule({
   declarations: [

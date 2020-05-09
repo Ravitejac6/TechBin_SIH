@@ -52,13 +52,6 @@ export class AuthService {
     // });
   }
 
-  arrayData(list) {
-    console.log("Function Called");
-    for (var i = 0; i < list.length; i++) {
-      console.log("Array value" + list[i]);
-    }
-  }
-
   doGoogleLogin() {
     let provider = new firebase.auth.GoogleAuthProvider();
     provider.addScope("profile");
@@ -177,6 +170,7 @@ export class AuthService {
   string_set(string1) {
     this.res = string1;
   }
+
   get_string(): string {
     return this.res;
   }

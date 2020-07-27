@@ -12,8 +12,13 @@ export const environment = {
     storageBucket: "smart-pizza-1d507.appspot.com",
     messagingSenderId: "259804953979",
     appId: "1:259804953979:web:29e64d9b4017a2bd6951de",
-    measurementId: "G-G7PG5Q29SK"
-  }
+    measurementId: "G-G7PG5Q29SK",
+  },
+  mapbox: {
+    accessToken:
+      "pk.eyJ1IjoicGExLWthbHlhbi1zIiwiYSI6ImNrNXk3NGRycDA4NHgza3AzOXh5bzNvZ3cifQ.rmogNiV8aHqs3ishdVpvSw",
+    //accessToken: 'pa1-kalyan-s.ck61plp03037l2oqrn4k52p24-2abc9'
+  },
 };
 
 /*

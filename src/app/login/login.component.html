@@ -1,10 +1,18 @@
 <html>
   <body class="bg">
-    <mat-toolbar>
-      <span>Tech Bin</span>
-      <span class="example-spacer"></span>
+    <mat-toolbar color="primary">
+      <mat-toolbar-row>
+        <!-- <button mat-icon-button>
+          <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
+        </button> -->
+        <a class="title-name" mat-button (click)="gotoHome()"> TechBin </a>
+        <span class="menu-spacer"> </span>
+        <div class="profile-button">
+          <a mat-button> Profile </a>
+          <a mat-button> LogOut </a>
+        </div>
+      </mat-toolbar-row>
     </mat-toolbar>
-
     <!-- <div>
       <div id="chart-container"></div>
     </div> -->

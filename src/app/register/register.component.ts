@@ -1,10 +1,10 @@
 import { Component, OnInit } from "@angular/core";
 import { ActivatedRoute } from "@angular/router";
 import { AuthService } from "../services/auth.service";
+import { DataService } from "../services/data.service";
 import * as firebase from "firebase/app";
 import { Router } from "@angular/router";
 import { Observable } from "rxjs";
-
 @Component({
   selector: "app-register",
   templateUrl: "./register.component.html",
@@ -12,8 +12,10 @@ import { Observable } from "rxjs";
 })
 export class RegisterComponent implements OnInit {
   public firebaseData: Observable<any>;
+
   constructor(
     private authService: AuthService,
+    private dataService: DataService,
     public router: Router,
     private route: ActivatedRoute
   ) {
@@ -26,7 +28,7 @@ export class RegisterComponent implements OnInit {
       console.log(this.res);
       this.authService.string_set(this.res);
     });
-    this.firebaseData = this.authService.display_details(); // Retrieving data from a realtime db.
+    this.firebaseData = this.dataService.display_details(); // Retrieving data from a realtime db.
   }
 
   tryGoogleLogin() {

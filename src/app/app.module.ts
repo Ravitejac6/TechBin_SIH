@@ -24,7 +24,8 @@ import { ChartsModule } from "ng2-charts";
 import { MatListModule } from "@angular/material/list";
 import { MatSidenavModule } from "@angular/material/sidenav";
 import { FlexLayoutModule } from "@angular/flex-layout";
-import { HeaderComponent } from "./header/header.component";
+import { MatProgressSpinnerModule } from "@angular/material/progress-spinner";
+
 import { AuthService } from "./services/auth.service";
 
 @NgModule({
@@ -33,7 +34,6 @@ import { AuthService } from "./services/auth.service";
     LoginComponent,
     RegisterComponent,
     UserComponent,
-    HeaderComponent,
   ],
   imports: [
     BrowserModule,
@@ -50,6 +50,7 @@ import { AuthService } from "./services/auth.service";
     MatListModule,
     FlexLayoutModule,
     MatCardModule,
+    MatProgressSpinnerModule,
     AgmCoreModule.forRoot({
       apiKey: "AIzaSyAhusDEobqFjkf5_U328gcU48GbZe_A58Q",
     }),

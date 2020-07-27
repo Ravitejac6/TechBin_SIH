@@ -1,9 +1,11 @@
 import { Component, OnInit } from "@angular/core";
 import { AuthService } from "src/app/services/auth.service";
+import { DataService } from "src/app/services/data.service";
 import { Router } from "@angular/router";
 import { BrowserModule } from "@angular/platform-browser";
 import { ChartDataSets, ChartOptions } from "chart.js";
 import { Color, Label } from "ng2-charts";
+
 import { Observable, Subscription } from "rxjs";
 
 @Component({
@@ -17,11 +19,15 @@ export class LoginComponent implements OnInit {
   values: Array<any> = []; //Array Initialization.
   noteListSubscription: Subscription;
 
-  constructor(public as: AuthService, private route: Router) {}
+  constructor(
+    public as: AuthService,
+    private route: Router,
+    public dataService: DataService
+  ) {}
   // To iterate observable we have to subscribe it and do it.
   ngOnInit() {
     this.data = this.as.get_string();
-    this.dbData = this.as.display_details();
+    this.dbData = this.dataService.display_details();
     // Iterating over the data which is in the observable.
     this.dbData.subscribe((val) =>
       val.forEach((element) => {
@@ -63,6 +69,10 @@ export class LoginComponent implements OnInit {
     this.as.loggedOut().then((v) => {
       console.log(v);
     });
+    this.route.navigate(["/register"]);
+  }
+
+  gotoHome() {
     this.route.navigate(["/register"]);
   }
 }

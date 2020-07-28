@@ -5,6 +5,7 @@ import { LoginComponent } from "./login/login.component";
 import { RegisterComponent } from "./register/register.component";
 import { UserComponent } from "./user/user.component";
 import { AuthGuard } from "./guards/auth.guard";
+import { EngageComponent } from "./components/engage/engage.component";
 
 export const rootRouterConfig: Routes = [
   { path: "", redirectTo: "register", pathMatch: "full" },
@@ -12,6 +13,7 @@ export const rootRouterConfig: Routes = [
   { path: "register", component: RegisterComponent },
   { path: "register/:res", component: RegisterComponent },
   { path: "user", component: UserComponent },
+  { path: "engage", component: EngageComponent },
   { path: "**", component: RegisterComponent },
 ];
 

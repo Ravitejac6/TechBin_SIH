@@ -1,0 +1,75 @@
+<div>
+  <mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <h1>TechBin</h1>
+      <span class="menu-spacer"> </span>
+      <div>
+        <a mat-button> Profile </a>
+        <a mat-button> LogOut </a>
+      </div>
+    </mat-toolbar-row>
+  </mat-toolbar>
+</div>
+<div
+  class="container"
+  fxLayout="row"
+  fxLayout.sm="column"
+  fxLayout.xs="column"
+  fxLayoutAlign.gt-md="space-around center"
+  fxLayoutGap="10px"
+  fxLayoutGap.xs="0"
+>
+  <div fxFlex="40">
+    <mat-card class="spinner-card">
+      <mat-card-content class="spinner">
+        <h2 class="example-h2">Raviteja</h2>
+        <mat-progress-spinner
+          class="example-margin"
+          [color]="color"
+          [mode]="mode"
+          [value]="value"
+          [diameter]="150"
+        >
+        </mat-progress-spinner>
+        <div class="progress-value">
+          {{ value }}
+        </div>
+      </mat-card-content>
+      <div>
+        <div>
+          <div class="charts-block">
+            <canvas
+              baseChart
+              [datasets]="barChartData"
+              [labels]="barChartLabels"
+              [options]="barChartOptions"
+              [plugins]="barChartPlugins"
+              [legend]="barChartLegend"
+              [chartType]="barChartType"
+            >
+            </canvas>
+          </div>
+          <!-- <button
+            mat-button
+            mat-raised-button
+            color="primary"
+            (click)="randomize()"
+          >
+            Update
+          </button> -->
+        </div>
+      </div>
+    </mat-card>
+  </div>
+
+  <div fxFlex="40" class="boxes">
+    <mat-grid-list cols="2" rowHeight="220px">
+      <mat-grid-tile class="tile">
+        <p>Total Weight</p>
+      </mat-grid-tile>
+      <mat-grid-tile class="tile"><p>Contribution Percentage</p></mat-grid-tile>
+      <mat-grid-tile class="tile"><p>Rewards Points</p></mat-grid-tile>
+      <mat-grid-tile class="tile"><p>Highest Weight</p></mat-grid-tile>
+    </mat-grid-list>
+  </div>
+</div>

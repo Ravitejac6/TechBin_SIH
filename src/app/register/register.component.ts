@@ -39,7 +39,9 @@ export class RegisterComponent implements OnInit {
     this.authService.anonymousLogin();
     this.router.navigate(["/user"]);
   }
-
+  goToEngage() {
+    this.router.navigate(["/engage"]);
+  }
   checkData() {
     // this.authService.display_details();
   }

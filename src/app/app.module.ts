@@ -25,8 +25,12 @@ import { MatListModule } from "@angular/material/list";
 import { MatSidenavModule } from "@angular/material/sidenav";
 import { FlexLayoutModule } from "@angular/flex-layout";
 import { MatProgressSpinnerModule } from "@angular/material/progress-spinner";
+import { MatRadioModule } from "@angular/material/radio";
+import { MatSliderModule } from "@angular/material/slider";
+import { MatGridListModule } from "@angular/material/grid-list";
 
 import { AuthService } from "./services/auth.service";
+import { EngageComponent } from "./components/engage/engage.component";
 
 @NgModule({
   declarations: [
@@ -34,6 +38,7 @@ import { AuthService } from "./services/auth.service";
     LoginComponent,
     RegisterComponent,
     UserComponent,
+    EngageComponent,
   ],
   imports: [
     BrowserModule,
@@ -50,6 +55,9 @@ import { AuthService } from "./services/auth.service";
     MatListModule,
     FlexLayoutModule,
     MatCardModule,
+    MatSliderModule,
+    MatRadioModule,
+    MatGridListModule,
     MatProgressSpinnerModule,
     AgmCoreModule.forRoot({
       apiKey: "AIzaSyAhusDEobqFjkf5_U328gcU48GbZe_A58Q",

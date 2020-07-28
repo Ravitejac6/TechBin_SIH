@@ -31,9 +31,7 @@
           [diameter]="150"
         >
         </mat-progress-spinner>
-        <div class="progress-value">
-          {{ value }}
-        </div>
+        <div class="progress-value">{{ value }}</div>
       </mat-card-content>
       <div>
         <div>
@@ -62,14 +60,32 @@
     </mat-card>
   </div>
 
-  <div fxFlex="40" class="boxes">
+  <div fxFlex="50" class="boxes">
     <mat-grid-list cols="2" rowHeight="220px">
       <mat-grid-tile class="tile">
-        <p>Total Weight</p>
+        <mat-grid-tile-header style="color: rgb(17, 1, 102);"
+          >Total Weight</mat-grid-tile-header
+        >
+        <p><span style="font-size: 35px;">10</span>kg</p>
       </mat-grid-tile>
-      <mat-grid-tile class="tile"><p>Contribution Percentage</p></mat-grid-tile>
-      <mat-grid-tile class="tile"><p>Rewards Points</p></mat-grid-tile>
-      <mat-grid-tile class="tile"><p>Highest Weight</p></mat-grid-tile>
+      <mat-grid-tile class="tile">
+        <mat-grid-tile-header style="color: rgb(17, 1, 102);"
+          >Contribution Percentage</mat-grid-tile-header
+        >
+        <p><span style="font-size: 35px;">13</span>%</p>
+      </mat-grid-tile>
+      <mat-grid-tile class="tile">
+        <mat-grid-tile-header style="color: rgb(17, 1, 102);"
+          >Rewards Points</mat-grid-tile-header
+        >
+        <p><span style="font-size: 35px;">25</span>points</p>
+      </mat-grid-tile>
+      <mat-grid-tile class="tile">
+        <mat-grid-tile-header style="color: rgb(17, 1, 102);"
+          >Highest Weight</mat-grid-tile-header
+        >
+        <p><span style="font-size: 35px;">1</span>kg</p>
+      </mat-grid-tile>
     </mat-grid-list>
   </div>
 </div>
